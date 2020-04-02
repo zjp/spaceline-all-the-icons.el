@@ -530,8 +530,8 @@ ICON-SET defaults to `spaceline-all-the-icons-icon-set-window-numbering'."
 
 (spaceline-define-segment all-the-icons-buffer-id
   "An `all-the-icons' segment to display current buffer id"
-  (let* ((height (if spaceline-all-the-icons-slim-render 1.0 0.8))
-         (raise  (if spaceline-all-the-icons-slim-render 0.1 0.2))
+  (let* ((height (if spaceline-all-the-icons-slim-render 0.8 1.0))
+         (raise  (if spaceline-all-the-icons-slim-render 0.2 0.1))
 
          (help-echo (format "Major-mode: `%s'" major-mode))
 
@@ -589,8 +589,8 @@ ICON-SET defaults to `spaceline-all-the-icons-icon-set-window-numbering'."
 (spaceline-define-segment all-the-icons-buffer-path
   "An `all-the-icons' segment to display the path for the current buffer.
 It is only enabled when you're not in a project or if the projectile segment is disabled."
-  (let ((height (if spaceline-all-the-icons-slim-render 1.0 0.8))
-        (raise  (if spaceline-all-the-icons-slim-render 0.1 0.2))
+  (let ((height (if spaceline-all-the-icons-slim-render 0.8 1.0))
+        (raise  (if spaceline-all-the-icons-slim-render 0.2 0.1))
         (path   (spaceline-all-the-icons--buffer-path)))
 
     (when path
